@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+Template Name: Halice
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html lang="">
+<head>
+<title>Brandon Motes | CERN</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('../images/demo/backgrounds/01.png');">
+  <!-- ################################################################################################ -->
+  <div class="wrapper row0">
+    <div id="topbar" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div class="fl_left">
+
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="../index.html">GridEdge Solar</a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li><a href="../index.html">Home</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content">
+      <!-- ################################################################################################ -->
+
+      <img class="imgr borderedbox inspace-5" src="../images/demo/imgr.gif" alt="">
+      <p>I began working for this lab in the summer of 2018 and have continued to work in this lab. I develop automated test beds for perovskite solar panels produced in the lab to guide development.</p>
+      <h1>Summer 2018</h1>
+      <p>When I joined the lab, the team had already set up a time resolved photoluminescence (TRPL) test
+         bed, an optical test that can be used to judge efficiency. This setup required a good deal of
+          manual work as the user needed to use a range of optical filters requiring the user to stop,
+          change the filter by hand, and then begin another run, consequently generating seperate files that must be
+          tracked and kept together. Furthermore, the light sensor was extremely sensitive and could
+          only be operated in the dark. If the lid was taken off while the sesnor was on, it would be damaged.
+          My work over the summer was automating as much of this work as possible.</p>
+      <p>I started with creating a stepper motor driven wheel to hold the filters, so the user would not have to be changed them by hand.
+        I printed most of the assembly out of PLA on a 3D printer, and made it mountable to a standard optical breadboard post for
+        easy placement.</p>
+      <p>Next I completed a current project they had begun and integrated a reed switch on the
+        lid that would trigger a shutter covering the light sensor to protect it form overexposure.</p>
+      <p>With all of the parts being controlled by software now (all the other optical parts could be conrolled with commercial software),
+        I had to merge the control of all of the components. The chosen solution was to write completely new
+        custom software. This would also allow future features to be easily integrated. Most of the summer
+         was spent developing this software.
+      <img class="imgl borderedbox inspace-5" src="../images/demo/imgl.gif" alt="">
+      <p>The software was built off of an open source python project called
+         <a href="scope-foundry.com" title="">SourceFoundry</a>. This project was used to
+          provide the GUI for the project. I wrote a new backend for the program to interface
+          all of the hardware compoennts. The hardware components I built were connected to a
+           RaspberyPi that was then connected to the LAN. The lab computer could then send commands
+            to the RaspberryPi via a TCP port. The commercial hardware was either either connected
+            to a PCI slot and given commands via a DLL file.</p>
+      <p>The final product allowed the user to put in a single sample, set the intensity regimes,
+         collection times, and other important parameters, then click run once and come back to a
+          single data file. It also provides the extra layer of protection for the optical sensor.</p>
+      <h1>Spring 2019</h1>
+      <p>After finsihing the first prototype, the lab wanted a version that could perform these characterizations on
+       multiple samples, a sheet, or a roll in-situ during fabrication. This presented an entire new regime of motor control
+      to the project. I created a CAD model of a desgin and began construction.</p>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="../layout/scripts/jquery.min.js"></script>
+<script src="../layout/scripts/jquery.backtotop.js"></script>
+<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+</body>
+</html>
