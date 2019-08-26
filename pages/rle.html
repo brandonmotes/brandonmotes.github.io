@@ -39,7 +39,7 @@ Licence URI: http://www.os-templates.com/template-terms
   <header id="header" class="hoc clear">
     <!-- ################################################################################################ -->
     <div id="logo" class="fl_left">
-      <h1><a href="../index.html">GridEdge Solar</a></h1>
+      <h1><a href="../index.html">RLE</a></h1>
     </div>
     <nav id="mainav" class="fl_right">
       <ul class="clear">
@@ -58,35 +58,15 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <div class="content">
       <!-- ################################################################################################ -->
-
-      <img class="imgr borderedbox inspace-5" src="../images/demo/imgr.gif" alt="">
-      <h2>Overview</h2>
-      <p>I have been working for this lab since the summer after my freshman year.
-         I develop automated test beds for the lab. The most recent project is a CNC characterization tool,
-         currently supporting time resolved photoluminescences (TRPL) and broad-band spectroscopy.</p>
-      <p>The device gives the user a bed that any sized sample or samples can be placed. The device images the bed
-       displays the image to the user, who then can select points to perform the characterizations.</p>
-      <p>The project includes everything from the desgin and construction of the machine to the GUI.
-      <h2>Hardware/Firware</h2>
-      <p>After taking input from the lab's needs, I designed the machine and created the below CAD model.</p>
-      <p>The design uses standard NEMA17 stepper motors, keeping costs low. They are being driven with
-        TMC2130 motor drivers. I made a PCB that hosts the drivers and a Teensy 3.6. The machine
-        drives a head which hosts a a optical appratus that receives and sends signals via fiber optical
-      cables connected to the appropiate optical equipment. </p>
-      <p>I am currently writing custom firmware for the motor control to run on the Teensy. The firmware
-        is configurable with acceleration and max speed and supports skipped step correction and
-        homing wihout limit switches.</p>
-      <h2>Software</h2>
-      <p>The software structure is a bit interesting because the lab wanted as much as possible to be done
-        in python. I decided to do the GUI in Unity despite this because I believed it would make the GUI
-        developemnt easier and more feature rich. To keep the rest of the software in python, the GUI is linked
-        to the main body of code, called Centroid in the repository, with an internal TCP socket connection. The centroid is also
-        linked to the Teensy/motor board with a serial connection through a USB cable, to the camera via another USB cable, and to other
-        other optical devices via a PCI slot and a USB cable.</p>
-        <!-- Software diagram -->
-      <p></p>
-
-
+      <p>This lab is working to develop a table top MRI machine. They needed a device that can map the magnetic field
+        of the array of permanant magnets. I designed a PCB containing holding an array of hall effect sensors on a I2C
+        bus connected to a Teensy that can be connected to a PC via a USB cable. I then modified a 3D printer by extending
+         the y axis and replacing the head with an arm that holds the sensor board.
+         <!--printer pi -->
+      <p>I also wrote software which takes the dimensions of the magneta and the desired density of measurements. The software
+        will generate an efficient path to utilize all of the sensors to reduce run time. The data is then exported to a spread shett
+        and a graph can be generated to visualize the field.</p>
+        <!-- graph picutre-->
     <!-- ################################################################################################ -->
     <!-- / main body -->
     <div class="clear"></div>

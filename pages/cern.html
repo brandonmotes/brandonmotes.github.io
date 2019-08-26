@@ -62,11 +62,11 @@ Licence URI: http://www.os-templates.com/template-terms
       <p>Over the summer I was a part of a project implementing neural net algorithms on FPGAs. This firmware is being developed for the CMS trigger upgrade.
 The trigger is the process that takes in a live data stream from the CMS detector and chooses whether or not to keep the frame of data.
 The firmware requires both low latency and high throughput as the data rate is in the order of hundreds of terabytes,
-and the collisions are occuring over nano seconds. The system utilizes a 10 frame buffer, so all processing must be done before the frame exits the buffer.</p>
+and the collisions are occuring over nano seconds. The CMS DAQ utilizes a 10 frame buffer, so all processing must be done before the frame exits the buffer.</p>
       <p>The testing was done on a <a href="https://www.xilinx.com/content/xilinx/en/products/boards-and-kits/vcu118.html" title="Xilinx Virtex UltraScale+ FPGA VCU118 Evaluation Kit">Xilinx Virtex UltraScale+ FPGA VCU118 Evaluation Kit</a>, using the Xilinx tool chain.
 Over the summer I was exposed to both Vivado HLS and Vivado, however the majority of my work was done with Vivado, using VHDL.</p>
       <img class="imgl borderedbox inspace-5" src="../images/demo/imgl.gif" alt="">
-      <p>The final prodcut of my summer's work was a module to perform division on a stream of data between two layers of the trigger. The module can perform up to the DSP max bit input (27 for board used) in 3 clock cylces with a fraction of a percent of error. </p>
+      <p>The final prodcut of my summer's work was a module to perform division on a stream of data between two layers of the trigger. The module can perform up to the DSP max bit input (27 for board used) in 3 clock cylces at 100MHz with a fraction of a percent of error. </p>
 
     <!-- ################################################################################################ -->
     <!-- / main body -->
@@ -79,7 +79,7 @@ Over the summer I was exposed to both Vivado HLS and Vivado, however the majorit
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear">
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_left">Copyright &copy; 2019 - All Rights Reserved - <a href="#">brandonmotes.com</a></p>
     <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
     <!-- ################################################################################################ -->
   </div>
